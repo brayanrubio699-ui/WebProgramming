@@ -24,18 +24,6 @@ passport.use(
  )
 );
 
-passport.use(
-  new GithubStrategy(
-    {
-      clientID: GITHUB_CLIENT_ID,
-      clientSecret: GITHUB_CLIENT_SECRET,
-      callbackURL: "/auth/github/callback",
-    },
-    function (accessToken, refreshToken, profile, done) {
-      done(null, profile);
-    }
-  )
-);
 
 passport.use(
   new FacebookStrategy(
