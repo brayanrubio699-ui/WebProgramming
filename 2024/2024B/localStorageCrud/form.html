@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Un CRUD con "local storage"</title>
+        <style>
+            body { font-family: Arial, Helvetica, sans-serif;}
+            .user-list{ margin-top: 20px;}
+            .user-body{ margin-bottom: 15px;}
+            .edit-button, .delete-button{ margin-left: 10px;}
+        </style>
+    </head>
+
+    <body>
+        <form id="user-form" method="POST">
+            <input type="hidden" id="user-id" value="">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="age">Edad:</label>
+            <input type="number" id="age" name="age" required>
+            <button type="submit" id="submit">Guardar</button>
+        </form>
+
+        <!-- lista de clientes -->
+         <div id="userList">
+            <h3>Lista de Usuarios</h3>
+         </div>
+
+         <script>
+
+            let users = [];
+            const savedUsers = localStorage.getItem("users");
+
+            if(savedUsers)
+            {
+                try{
+                    users = JSON.parse("savedUsers");
+                }   
+                catch(e)
+                {
+                    console.error("Users no está en local storage");
+                    users = [];
+                }
+            }
+            //console.log("usuarios cargados al inicio:",users);
+            //let users = JSON.parse(localStorage.getItem("users")) || [];
+
+            function showUsers()
+            {
+                const userList = document.getElementById("userList");
+                userList.innerHTML="<h3>Lista de Usuarios</h3>";
+
+                if (!Array.isArray(users)) {
+                    users = [];  // Asegurar que users es un array
+                }
+
+                if(users.length === 0){
+                    userList.innerHTML="<p>No hay usuarios para mostrar</p>";
+                    return;
+                }
+                else{
+                    users.forEach((user, index) => {
+                        console.log(user);
+                        const userItem = document.createElement("div");
+                        userItem.classList.add("user-body");
+                        userItem.innerHTML = ` Nombre: ${user.name}, Edad: ${user.age} 
+                            <button class='edit-button' onclick='editUser(${index})' >Editar</button>
+                            <button class='delete-button' onclick='deleteUser(${index})' >Eliminar</button>                     
+                        `;
+                        userList.appendChild(userItem);                    
+                    });
+                }                
+            }
+
+            function addUser(event)
+            {
+                event.preventDefault(); //evita manejo por default del evento
+                //obtener valores del formulario:
+                const name=document.getElementById("name").value;
+                const age=document.getElementById("age").value;
+                const user_id = document.getElementById("user-id").value;
+                if(user_id){
+                    //actualizar:
+                    users[user_id] = {name, age};                    
+                }
+                else{
+                    //agregar nuevo usuario al local storage:
+                    users.push({name, age});
+                }
+                //guardar lista de usuarios en el local storage como cadena de JSON:
+                localStorage.setItem("users",JSON.stringify(users));
+                showUsers();
+                //resetear formulario:
+                document.getElementById("user-form").reset();
+                document.getElementById("user-id").value = "";
+
+            }
+
+            function deleteUser(index)
+            {
+                //splice elimina un eleento de un arreglo y lo sobreescribe:
+                users.splice(index,1);
+                //guarda la lista en el local storage como una cadena de JSON:
+                localStorage.setItem("users",JSON.stringify(users));
+                showUsers();
+
+            }
+
+            function editUser(index)
+            {
+                const user = users[index];
+                document.getElementById("name").value = user.name;
+                document.getElementById("age").value = user.age;
+                document.getElementById("user-id").value = index;
+
+                //cambiamos el texto del botón:
+                document.getElementById("submit").textContent = "Actualizar";
+            }
+
+            document.getElementById("user-form").addEventListener("submit",addUser);
+            //showUsers();
+
+         </script>
+    </body>
+</html>
