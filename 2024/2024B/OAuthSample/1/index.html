@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OAuth Authentication</title>
+</head>
+<body>
+  <h1>Login with Google or Facebook</h1>
+
+  <!-- Google Sign-In Button -->
+  <div id="googleSignInDiv"></div>
+
+  <!-- Facebook Login Button -->
+  <button id="facebookLoginButton">Login with Facebook</button>
+
+  <div id="result"></div>
+
+  <!-- Google Platform Library -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <!-- Facebook SDK -->
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+  <!-- Include External JavaScript -->
+  <script src="auth.js" defer></script>
+</body>
+</html>
