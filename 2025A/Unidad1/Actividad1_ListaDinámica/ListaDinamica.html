@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <!-- referencia a la hoja de estilo -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <h1>Mi lista de tareas</h1>
+        <!--formulario para ingresar nuevas tareas: -->
+        <form id="taskForm">
+            <div class="form-group">
+                <label for="title">Título de la tarea</label>
+                <input type="text" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Fecha de finalización</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="status">Estado</label>
+                <select id="status" required>
+                    <option value="0">Pendiente</option>
+                    <option value="1">Finalizada</option>
+                    <option value="2">Desarrollo</option>
+                </select>
+            </div>
+            <button type="submit">Crear tarea</button>
+        </form>
+        
+        <!-- contenedor donde se mostrarán las tareas creadas: -->
+        <div id="taskList">
+
+        </div>
+        <!-- referencia al script -->
+        <script src="script.js"></script>
+    </body>
+
+</html>

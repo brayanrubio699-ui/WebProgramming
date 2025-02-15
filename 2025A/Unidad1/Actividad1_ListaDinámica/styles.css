@@ -1,0 +1,26 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1{
+    color: #333;
+}
+
+/* estilo para todos los formularios: */
+form{
+    background-color:#FFF;
+    /*  margen interno   */
+    padding:15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,1);
+    margin-bottom: 20px;
+}
+
+/* estilo para elementos de la clase "form-group*/
+.form-group
+{
+    margin-bottom: 10px;
+}
