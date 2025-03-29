@@ -1,0 +1,287 @@
+// AUTORES
+[
+  {
+    "nombre": "Jean",
+    "apellido": "Giraud",
+    "nombreArtistico": "Moebius",
+    "nacionalidad": "Francés",
+    "fechaNacimiento": "1938-05-08",
+    "fechaFallecimiento": "2012-03-10",
+    "biografia": "Jean Giraud, conocido por su seudónimo Moebius, fue un historietista francés considerado uno de los artistas más influyentes del cómic. Su trabajo se caracteriza por mundos surrealistas y una línea clara y detallada. Influyó enormemente en el cine de ciencia ficción, incluyendo obras como 'Blade Runner', 'Alien' y 'El Quinto Elemento'."
+  },
+  {
+    "nombre": "Alan",
+    "apellido": "Moore",
+    "nacionalidad": "Británico",
+    "fechaNacimiento": "1953-11-18",
+    "biografia": "Alan Moore es un escritor británico conocido por su trabajo en cómics innovadores y de gran profundidad filosófica. Sus obras a menudo deconstruyen el género de superhéroes y abordan temas políticos y sociales complejos."
+  },
+  {
+    "nombre": "Frank",
+    "apellido": "Miller",
+    "nacionalidad": "Estadounidense",
+    "fechaNacimiento": "1957-01-27",
+    "biografia": "Frank Miller es un autor de cómics, guionista y director de cine estadounidense. Es conocido por su estilo noir y sus reinterpretaciones oscuras de personajes clásicos como Batman y Daredevil."
+  },
+  {
+    "nombre": "Neil",
+    "apellido": "Gaiman",
+    "nacionalidad": "Británico",
+    "fechaNacimiento": "1960-11-10",
+    "biografia": "Neil Gaiman es un autor de ficción, novelas, cómics, novelas gráficas, teatro, y guiones. Su obra más conocida en cómics es The Sandman, considerada una de las mejores series de novelas gráficas jamás escritas."
+  },
+  {
+    "nombre": "Marjane",
+    "apellido": "Satrapi",
+    "nacionalidad": "Iraní",
+    "fechaNacimiento": "1969-11-22",
+    "biografia": "Marjane Satrapi es una autora de cómics, ilustradora, directora de cine y escritora infantil iraní. Es conocida principalmente por su novela gráfica autobiográfica Persépolis."
+  },
+  {
+    "nombre": "Francisco",
+    "apellido": "Ibáñez",
+    "nacionalidad": "Español",
+    "fechaNacimiento": "1936-03-15",
+    "fechaFallecimiento": "2023-07-15",
+    "biografia": "Francisco Ibáñez fue un historietista español, creador de numerosas series de historietas humorísticas, entre las que destaca Mortadelo y Filemón."
+  },
+  {
+    "nombre": "Quino",
+    "apellido": "Lavado",
+    "nombreArtistico": "Quino",
+    "nacionalidad": "Argentino",
+    "fechaNacimiento": "1932-07-17",
+    "fechaFallecimiento": "2020-09-30",
+    "biografia": "Joaquín Salvador Lavado Tejón, conocido como Quino, fue un humorista gráfico y creador de historietas argentino. Su obra más conocida es la tira cómica Mafalda."
+  },
+  {
+    "nombre": "Osamu",
+    "apellido": "Tezuka",
+    "nacionalidad": "Japonés",
+    "fechaNacimiento": "1928-11-03",
+    "fechaFallecimiento": "1989-02-09",
+    "biografia": "Osamu Tezuka fue un dibujante de manga, animador, productor y médico japonés. Se le conoce como el 'padre del manga' y es considerado el manga-ka más importante de la historia."
+  },
+  {
+    "nombre": "Stan",
+    "apellido": "Lee",
+    "nacionalidad": "Estadounidense",
+    "fechaNacimiento": "1922-12-28",
+    "fechaFallecimiento": "2018-11-12",
+    "biografia": "Stan Lee fue un escritor y editor de cómics estadounidense, principalmente para Marvel Comics. Junto con varios artistas, co-creó numerosos personajes populares, incluyendo superhéroes como Spider-Man, los X-Men, Iron Man, Thor, Hulk, entre otros."
+  },
+  {
+    "nombre": "Art",
+    "apellido": "Spiegelman",
+    "nacionalidad": "Estadounidense",
+    "fechaNacimiento": "1948-02-15",
+    "biografia": "Art Spiegelman es un historietista, editor e ilustrador estadounidense. Su obra más famosa es 'Maus', una novela gráfica que relata las experiencias de su padre como superviviente del Holocausto."
+  }
+]
+
+// COMICS
+[
+  // Comics de Moebius (Jean Giraud)
+  {
+    "titulo": "El Incal",
+    "anioPublicacion": 1980,
+    "editorial": "Les Humanoïdes Associés",
+    "sinopsis": "Una epopeya de ciencia ficción que sigue a John DiFool, un detective de clase baja, después de que encuentra un antiguo artefacto llamado 'El Incal'. Escrito por Alejandro Jodorowsky y dibujado por Moebius, la historia mezcla elementos de ciencia ficción, fantasía, sátira y espiritualidad.",
+    "generos": ["Ciencia ficción", "Fantasía", "Aventura"],
+    "autorId": "[ID_DE_MOEBIUS]"
+  },
+  {
+    "titulo": "Arzach",
+    "anioPublicacion": 1975,
+    "editorial": "Metal Hurlant",
+    "sinopsis": "Una serie de historias surrealistas prácticamente sin diálogo que siguen a un guerrero silencioso que vuela sobre un mundo alienígena a lomos de un pterodáctilo. Considerada una obra maestra del cómic de fantasía y ciencia ficción.",
+    "generos": ["Fantasía", "Ciencia ficción", "Surrealismo"],
+    "autorId": "[ID_DE_MOEBIUS]"
+  },
+  {
+    "titulo": "The Airtight Garage",
+    "anioPublicacion": 1976,
+    "editorial": "Metal Hurlant",
+    "sinopsis": "Una serie de historias interconectadas que tienen lugar en un universo en miniatura llamado 'El Garaje Hermético de Lewis Carnelian'. La narrativa es intencionalmente no lineal y fragmentada, permitiendo a Moebius improvisar y crear una obra altamente surrealista.",
+    "generos": ["Ciencia ficción", "Surrealismo", "Fantasía"],
+    "autorId": "[ID_DE_MOEBIUS]"
+  },
+  {
+    "titulo": "The Long Tomorrow",
+    "anioPublicacion": 1976,
+    "editorial": "Metal Hurlant",
+    "sinopsis": "Una historia de ciencia ficción noir escrita por Dan O'Bannon y dibujada por Moebius. Es conocida por haber influido significativamente en la estética visual de películas como 'Blade Runner' y 'El Quinto Elemento'.",
+    "generos": ["Ciencia ficción", "Noir", "Cyberpunk"],
+    "autorId": "[ID_DE_MOEBIUS]"
+  },
+  
+  // Comics de Alan Moore
+  {
+    "titulo": "Watchmen",
+    "anioPublicacion": 1986,
+    "editorial": "DC Comics",
+    "sinopsis": "Ambientada en una historia alternativa de los Estados Unidos donde los superhéroes surgieron en las décadas de 1940 y 1960, la serie se centra en las vidas de un grupo de superhéroes retirados mientras uno de ellos es asesinado. La serie explora temas de poder, autoridad y moralidad.",
+    "generos": ["Superhéroes", "Drama", "Política"],
+    "autorId": "[ID_DE_ALAN_MOORE]"
+  },
+  {
+    "titulo": "V de Vendetta",
+    "anioPublicacion": 1982,
+    "editorial": "Vertigo",
+    "sinopsis": "Ambientada en una Inglaterra distópica y totalitaria de finales de la década de 1990, la serie cuenta la historia de un vigilante enmascarado conocido como 'V', que trabaja para destruir el régimen fascista, radicalizando a una joven llamada Evey Hammond.",
+    "generos": ["Drama", "Política", "Distopía"],
+    "autorId": "[ID_DE_ALAN_MOORE]"
+  },
+  {
+    "titulo": "From Hell",
+    "anioPublicacion": 1989,
+    "editorial": "Top Shelf Productions",
+    "sinopsis": "Una reconstrucción ficticia de los asesinatos de Jack el Destripador en el Londres de 1888. La serie utiliza la teoría de una conspiración de la realeza como punto de partida para explorar temas de clase, misoginia y el nacimiento del siglo XX.",
+    "generos": ["Horror", "Historia", "Thriller"],
+    "autorId": "[ID_DE_ALAN_MOORE]"
+  },
+  
+  // Comics de Frank Miller
+  {
+    "titulo": "The Dark Knight Returns",
+    "anioPublicacion": 1986,
+    "editorial": "DC Comics",
+    "sinopsis": "Ambientada en un futuro distópico, cuenta la historia de Bruce Wayne, quien después de diez años de retiro, regresa como Batman para luchar contra el crimen en una Gotham City cada vez más peligrosa.",
+    "generos": ["Superhéroes", "Acción", "Drama"],
+    "autorId": "[ID_DE_FRANK_MILLER]"
+  },
+  {
+    "titulo": "Sin City",
+    "anioPublicacion": 1991,
+    "editorial": "Dark Horse Comics",
+    "sinopsis": "Serie de historias noir ambientadas en Basin City, una ciudad ficticia dominada por el crimen. Se caracteriza por su estilo visual único, utilizando principalmente el blanco y negro con toques ocasionales de color.",
+    "generos": ["Noir", "Crimen", "Acción"],
+    "autorId": "[ID_DE_FRANK_MILLER]"
+  },
+  
+  // Comics de Neil Gaiman
+  {
+    "titulo": "The Sandman",
+    "anioPublicacion": 1989,
+    "editorial": "Vertigo",
+    "sinopsis": "La serie sigue a Dream (también conocido como Morfeo), uno de los siete Eternos, quienes representan diferentes aspectos de la existencia. Tras ser capturado y escapar después de 70 años, Dream debe adaptarse a los cambios y reconstruir su reino.",
+    "generos": ["Fantasía", "Horror", "Mitología"],
+    "autorId": "[ID_DE_NEIL_GAIMAN]"
+  },
+  {
+    "titulo": "Marvel 1602",
+    "anioPublicacion": 2003,
+    "editorial": "Marvel Comics",
+    "sinopsis": "Reimaginación de personajes del universo Marvel existiendo en el año 1602. La serie presenta versiones del siglo XVII de Nick Fury, los X-Men, los 4 Fantásticos y otros personajes de Marvel.",
+    "generos": ["Superhéroes", "Historia alternativa", "Aventura"],
+    "autorId": "[ID_DE_NEIL_GAIMAN]"
+  },
+  
+  // Comics de Marjane Satrapi
+  {
+    "titulo": "Persépolis",
+    "anioPublicacion": 2000,
+    "editorial": "L'Association",
+    "sinopsis": "Autobiografía gráfica que describe la infancia de Satrapi hasta su edad adulta en Irán durante y después de la Revolución Islámica. La obra ofrece una perspectiva única sobre la historia reciente de Irán.",
+    "generos": ["Autobiografía", "Historia", "Política"],
+    "autorId": "[ID_DE_MARJANE_SATRAPI]"
+  },
+  {
+    "titulo": "Bordados",
+    "anioPublicacion": 2003,
+    "editorial": "L'Association",
+    "sinopsis": "Un relato de las conversaciones que tienen las mujeres iraníes cuando los hombres abandonan la habitación después del té. Discuten sobre el sexo, el amor, el matrimonio y sus vidas en un entorno íntimo y franco.",
+    "generos": ["Autobiografía", "Social", "Humor"],
+    "autorId": "[ID_DE_MARJANE_SATRAPI]"
+  },
+  
+  // Comics de Francisco Ibáñez
+  {
+    "titulo": "Mortadelo y Filemón: El sulfato atómico",
+    "anioPublicacion": 1969,
+    "editorial": "Bruguera",
+    "sinopsis": "La primera aventura larga de Mortadelo y Filemón, en la que deben recuperar el sulfato atómico, un valioso compuesto robado por una organización criminal.",
+    "generos": ["Humor", "Aventura", "Espionaje"],
+    "autorId": "[ID_DE_FRANCISCO_IBAÑEZ]"
+  },
+  {
+    "titulo": "13, Rue del Percebe",
+    "anioPublicacion": 1961,
+    "editorial": "Bruguera",
+    "sinopsis": "Serie de viñetas humorísticas que muestran la vida cotidiana de los habitantes de un edificio de apartamentos, representando cada piso como una viñeta separada.",
+    "generos": ["Humor", "Costumbrismo"],
+    "autorId": "[ID_DE_FRANCISCO_IBAÑEZ]"
+  },
+  
+  // Comics de Quino
+  {
+    "titulo": "Mafalda",
+    "anioPublicacion": 1964,
+    "editorial": "Primera Plana",
+    "sinopsis": "Tira cómica que sigue a Mafalda, una niña de seis años preocupada por la humanidad y la paz mundial, y su visión crítica sobre el mundo de los adultos y los problemas sociales.",
+    "generos": ["Humor", "Política", "Social"],
+    "autorId": "[ID_DE_QUINO]"
+  },
+  {
+    "titulo": "¡A mí no me grite!",
+    "anioPublicacion": 1972,
+    "editorial": "Siglo XXI",
+    "sinopsis": "Recopilación de viñetas humorísticas que critican diversos aspectos de la sociedad moderna, desde la burocracia hasta las relaciones personales.",
+    "generos": ["Humor", "Social", "Sátira"],
+    "autorId": "[ID_DE_QUINO]"
+  },
+  
+  // Comics de Osamu Tezuka
+  {
+    "titulo": "Astro Boy",
+    "anioPublicacion": 1952,
+    "editorial": "Kodansha",
+    "sinopsis": "Historia de un robot con apariencia de niño creado por un científico para reemplazar a su hijo fallecido. Astro Boy, dotado de habilidades sobrehumanas, lucha contra la injusticia y el mal.",
+    "generos": ["Ciencia ficción", "Aventura", "Acción"],
+    "autorId": "[ID_DE_OSAMU_TEZUKA]"
+  },
+  {
+    "titulo": "Black Jack",
+    "anioPublicacion": 1973,
+    "editorial": "Akita Shoten",
+    "sinopsis": "Serie que sigue al Dr. Black Jack, un cirujano sin licencia que cobra precios exorbitantes por sus servicios médicos milagrosos, pero que también tiene un lado compasivo.",
+    "generos": ["Drama", "Médico", "Aventura"],
+    "autorId": "[ID_DE_OSAMU_TEZUKA]"
+  },
+  
+  // Comics de Stan Lee (con varios dibujantes)
+  {
+    "titulo": "The Amazing Spider-Man",
+    "anioPublicacion": 1962,
+    "editorial": "Marvel Comics",
+    "sinopsis": "Historia de Peter Parker, un estudiante que adquiere habilidades arácnidas tras ser mordido por una araña radiactiva. Tras la muerte de su tío Ben, aprende que 'un gran poder conlleva una gran responsabilidad'.",
+    "generos": ["Superhéroes", "Acción", "Drama"],
+    "autorId": "[ID_DE_STAN_LEE]"
+  },
+  {
+    "titulo": "Los 4 Fantásticos",
+    "anioPublicacion": 1961,
+    "editorial": "Marvel Comics",
+    "sinopsis": "Cuatro astronautas que, tras ser expuestos a rayos cósmicos, obtienen habilidades sobrehumanas. Reed Richards (Mr. Fantástico), Sue Storm (Mujer Invisible), Johnny Storm (Antorcha Humana) y Ben Grimm (La Cosa) utilizan sus poderes para proteger a la humanidad.",
+    "generos": ["Superhéroes", "Ciencia ficción", "Aventura"],
+    "autorId": "[ID_DE_STAN_LEE]"
+  },
+  
+  // Comics de Art Spiegelman
+  {
+    "titulo": "Maus",
+    "anioPublicacion": 1980,
+    "editorial": "Raw",
+    "sinopsis": "Novela gráfica que relata la experiencia del padre del autor como superviviente judío del Holocausto. Representa a los judíos como ratones, a los nazis como gatos y a los polacos como cerdos, utilizando la alegoría animal para explorar temas de trauma, memoria y supervivencia.",
+    "generos": ["Biografía", "Historia", "Holocausto"],
+    "autorId": "[ID_DE_ART_SPIEGELMAN]"
+  },
+  {
+    "titulo": "In the Shadow of No Towers",
+    "anioPublicacion": 2004,
+    "editorial": "Pantheon Books",
+    "sinopsis": "Reflexión personal sobre los ataques del 11 de septiembre de 2001 y sus consecuencias. Spiegelman, que fue testigo de los ataques, explora su trauma personal y la respuesta política estadounidense.",
+    "generos": ["Autobiografía", "Política", "Historia"],
+    "autorId": "[ID_DE_ART_SPIEGELMAN]"
+  }
+]
