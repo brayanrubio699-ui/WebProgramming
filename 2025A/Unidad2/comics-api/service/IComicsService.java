@@ -1,11 +1,11 @@
-package com.example.comicsapi.service;
+package com.example.comics_api.service;
 
-import com.example.comicsapi.dto.ComicDTO;
-import com.example.comicsapi.model.Comic;
+import com.example.comics_api.dto.ComicDTO;
+import com.example.comics_api.model.Comic;
 import java.util.List;
 import java.util.Optional;
 
-public interface ComicService {
+public interface IComicService {
     List<ComicDTO> findAllComics();
     Optional<ComicDTO> findComicById(String id);
     ComicDTO saveComic(Comic comic);
