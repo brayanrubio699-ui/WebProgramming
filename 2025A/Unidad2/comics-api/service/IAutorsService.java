@@ -1,11 +1,11 @@
-package com.example.comicsapi.service;
+package com.example.comics_api.service;
 
-import com.example.comicsapi.dto.AutorDTO;
-import com.example.comicsapi.model.Autor;
+import com.example.comics_api.dto.AutorDTO;
+import com.example.comics_api.model.Autor;
 import java.util.List;
 import java.util.Optional;
 
-public interface AutorService {
+public interface IAutorService {
     List<AutorDTO> findAllAutores();
     Optional<AutorDTO> findAutorById(String id);
     AutorDTO saveAutor(Autor autor);
