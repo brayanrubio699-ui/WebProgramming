@@ -1,17 +1,17 @@
 # Programación Web, 2025A
-# Universidad Santiago de Cali
+## Universidad Santiago de Cali
 
-# Implementación de Autenticación en Spring Boot con JWT
+## Implementación de Autenticación en Spring Boot con JWT
 
 Esta guía muestra cómo implementar autenticación basada en JSON Web Tokens (JWT) en una API Spring Boot.
 
-## Requisitos previos
+### Requisitos previos
 
 - JDK 17 o superior
 - Maven o Gradle
 - Conocimiento básico de Spring Boot y JWT
 
-## Paso 1: Configurar el proyecto
+### Paso 1: Configurar el proyecto
 
 Cree un nuevo proyecto Spring Boot con [Spring Initializr](https://start.spring.io/) incluyendo las siguientes dependencias:
 
@@ -21,7 +21,7 @@ Cree un nuevo proyecto Spring Boot con [Spring Initializr](https://start.spring.
 - H2 Database (para pruebas) o la base de datos de tu preferencia
 - Lombok (opcional pero recomendado)
 
-## Paso 2: Agregar dependencias para JWT
+### Paso 2: Agregar dependencias para JWT
 
 Añada las siguientes dependencias a su archivo `pom.xml` (Maven):
 
@@ -53,7 +53,7 @@ runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
 runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
 ```
 
-## Paso 3: Configuración de la aplicación
+### Paso 3: Configuración de la aplicación
 
 Añada la siguiente configuración a su `application.properties`:
 
@@ -71,7 +71,7 @@ app.jwt.secret=miClaveSecretaSuperSeguraQueDebeSerMasLargaEnProduccion
 app.jwt.expiration=86400000
 ```
 
-## Paso 4: Crear el modelo de Usuario
+### Paso 4: Crear el modelo de Usuario
 
 ```java
 package com.example.auth.models;
@@ -142,7 +142,7 @@ public class User implements UserDetails {
 }
 ```
 
-## Paso 5: Crear el repositorio de Usuario
+### Paso 5: Crear el repositorio de Usuario
 
 ```java
 package com.example.auth.repositories;
@@ -159,7 +159,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 }
 ```
 
-## Paso 6: Implementar el servicio JWT
+### Paso 6: Implementar el servicio JWT
 
 ```java
 package com.example.auth.security.jwt;
@@ -226,7 +226,7 @@ public class JwtUtils {
 }
 ```
 
-## Paso 7: Crear el filtro de autenticación JWT
+### Paso 7: Crear el filtro de autenticación JWT
 
 ```java
 package com.example.auth.security.jwt;
@@ -294,7 +294,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
 }
 ```
 
-## Paso 8: Crear el servicio de detalles de usuario
+### Paso 8: Crear el servicio de detalles de usuario
 
 ```java
 package com.example.auth.services;
@@ -324,7 +324,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 }
 ```
 
-## Paso 9: Configurar Spring Security
+### Paso 9: Configurar Spring Security
 
 ```java
 package com.example.auth.security;
@@ -404,7 +404,7 @@ public class SecurityConfig {
 }
 ```
 
-## Paso 10: Crear el punto de entrada JWT para manejo de errores
+### Paso 10: Crear el punto de entrada JWT para manejo de errores
 
 ```java
 package com.example.auth.security.jwt;
@@ -449,7 +449,7 @@ public class AuthEntryPointJwt implements AuthenticationEntryPoint {
 }
 ```
 
-## Paso 11: Crear modelos para los payloads
+### Paso 11: Crear modelos para los payloads
 
 ```java
 package com.example.auth.payload;
@@ -519,7 +519,7 @@ public class MessageResponse {
 }
 ```
 
-## Paso 12: Crear los controladores para la autenticación
+### Paso 12: Crear los controladores para la autenticación
 
 ```java
 package com.example.auth.controllers;
