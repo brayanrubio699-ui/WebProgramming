@@ -18,7 +18,7 @@ Cree un nuevo proyecto Spring Boot con [Spring Initializr](https://start.spring.
 - Spring Web
 - Spring Security
 - Spring Data JPA
-- H2 Database (para pruebas) o la base de datos de tu preferencia
+- H2 Database (para pruebas) o la base de datos de su preferencia
 - Lombok (opcional pero recomendado)
 
 ### Paso 2: Agregar dependencias para JWT
