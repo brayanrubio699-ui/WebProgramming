@@ -934,5 +934,3 @@ En la **Parte 2.2** cubriremos:
 - [Event Dispatching in Svelte](https://svelte.dev/tutorial/component-events)
 
 ---
-
-¡Continuemos con la Parte 2.2 para construir nuestra primera aplicación completa!
