@@ -325,4 +325,3 @@ En la **Parte 3**, desarrollaremos:
 
 ---
 
-¡Listo para continuar con la Parte 2 donde construiremos nuestra primera aplicación!
