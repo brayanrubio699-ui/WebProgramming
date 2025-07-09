@@ -126,3 +126,21 @@ Al finalizar el taller, los participantes contarán con un back-end funcional y 
 * Base de datos NoSQL estructurada y persistente.
 * API REST documentada y organizada modularmente.
 * Preparación para integración con motores como Unity o Three.js.
+
+### Calendario de Julio 2025 — Taller: Back-End para Metaverso Universitario
+
+| Lun | Mar | Mié | Jue | Vie | Sáb | Dom |
+|-----|-----|-----|-----|-----|-----|-----|
+|     |  1  |  2  |  3  |  4  |  5  |  6  |
+|  7  |  8  |  9  | 10  | 11  | 12  | 13  |
+| 14* | 15  | 16* | 17  | 18* | 19  | 20  |
+| 21* | 22  | 23* | 24  | 25* | 26  | 27  |
+| 28  | 29  | 30  | 31  |     |     |     |
+
+* Sesiones del taller:
+- **14**: Arquitectura y base del proyecto  
+- **16**: Usuarios y base de datos  
+- **18**: Autenticación y seguridad  
+- **21**: WebSockets y tiempo real  
+- **23**: Persistencia y recuperación de estado  
+- **25**: Escalabilidad y despliegue
