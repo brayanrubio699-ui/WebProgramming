@@ -1,0 +1,22 @@
+[
+  {
+    "scenarioId": "escenario_1",
+    "name": "Laboratorio de Física",
+    "description": "Simulación de caída libre y leyes de Newton",
+    "maxScore": 100,
+    "difficultyLevel": "medio",
+    "isActive": true,
+    "createdAt": "2025-07-01T00:00:00Z",
+    "updatedAt": "2025-07-01T00:00:00Z"
+  },
+  {
+    "scenarioId": "escenario_2",
+    "name": "Exploración Histórica",
+    "description": "Recorrido por civilizaciones antiguas en 3D",
+    "maxScore": 120,
+    "difficultyLevel": "fácil",
+    "isActive": true,
+    "createdAt": "2025-07-01T00:00:00Z",
+    "updatedAt": "2025-07-01T00:00:00Z"
+  }
+]
