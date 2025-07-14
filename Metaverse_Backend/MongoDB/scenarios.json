@@ -1,1 +1,12 @@
+{
+  _id: ObjectId,
+  scenarioId: String,        // Identificador único legible, ej: "escenario_1"
+  name: String,              // Nombre del escenario, ej: "Laboratorio Virtual de Química - Elementos y Compuestos"
+  description: String,       // Breve descripción del objetivo del escenario
+  maxScore: Number,          // Puntaje máximo posible (opcional)
+  difficultyLevel: String,   // Nivel de dificultad: "fácil", "medio", "difícil"
+  isActive: Boolean,         // Para activar o desactivar temporalmente un escenario
+  createdAt: Date,
+  updatedAt: Date
+}
 
