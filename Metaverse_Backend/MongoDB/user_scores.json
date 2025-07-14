@@ -1,0 +1,10 @@
+{
+  _id: ObjectId,
+  userId: ObjectId,         // Referencia al usuario
+  scenarioId: String,       // ID del escenario (ej. "escenario_1", "escenario_2")
+  score: Number,            // Puntaje más alto obtenido
+  attempts: Number,         // Número de intentos realizados
+  lastAttemptAt: Date,      // Fecha del último intento
+  createdAt: Date,
+  updatedAt: Date
+}
