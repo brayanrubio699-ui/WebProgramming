@@ -138,9 +138,51 @@ Al finalizar el taller, los participantes contarán con un back-end funcional y 
 | 28  | 29  | 30  | 31  |     |     |     |
 
 * Sesiones del taller:
-- **14**: Arquitectura y base del proyecto  
-- **16**: Usuarios y base de datos  
-- **18**: Autenticación y seguridad  
-- **21**: WebSockets y tiempo real  
-- **23**: Persistencia y recuperación de estado  
-- **25**: Escalabilidad y despliegue
+- **Julio 14, salón 8206**: Arquitectura y base del proyecto. Una introducción breve a Typescript: primeros pasos. 
+- **Julio 16, salón 8206**: Usuarios y base de datos  
+- **Julio 18, Salón 8105**: Autenticación y seguridad  
+- **Julio 21, salón 8206**: WebSockets y tiempo real  
+- **Julio 23, salón 8206**: Persistencia y recuperación de estado  
+- **Julio 25, Salón 8105**: Escalabilidad y despliegue
+
+##  Recomendaciones:
+
+- Preferiblemente usar un portátil propio donde se pueda instalar el software necesario. Se trabajará con NodeJS, Mongo DB (en la nube), Compass (para gestión de la base de datos), y demás librerías que se vayan necesitando.
+
+### Pasos iniciales: 
+
+1. Instalación de Node JS (entorno de ejecución de Javascript). Se recomienda la versión estable más reciente: https://nodejs.org/blog/release/v22.17.0
+2. Puede usar el IDE de su preferencia, pero se recomienda uno que permita gestionar la instalación de librerías y paquetes de forma sencilla, como visual studio code (https://code.visualstudio.com/). IntelliJ WebStorm también es una buena opción, si hace uso de la licencia educativa a través del correo institucional (https://www.jetbrains.com/webstorm/download/download-thanks.html)
+3. Una vez installado Node JS y el IDE con el que va a trabajar, verifique que Node haya quedado instalado: abra una ventana de comandos de windows o la consola de VS Code y escriba "node --version": debería aparecer el número de versión que instaló.
+4. Ubíquese en la carpeta donde alojará su proyecto (que no sea una ruta con un nombre muy largo, o la instalación de paquetes tendrá problemas). Ejemplo:
+   
+   >C:\WebHome\
+   
+   E instale NestJS (el framework de Javascript que usaremos):
+   
+   >C:\WebHome\ **npm install -g @nestjs/cli**
+   
+   Una vez termine la instalación de NestJS de forma completa y correcta, cree la carpeta del proyecto de la siguiente forma:
+   >C:\WebHome\ **nest new backend_metaverso**
+   >
+   Desde la carpeta del proyecto recién creada, vamos a instalar algunas dependencias adicionales para conectarnos con la base de datos y para manejar las clases y objetos del proyecto:
+   >C:\WebHome\backend_metaverso\ **npm install @nestjs/mongoose mongoose**
+   
+   >C:\WebHome\backend_metaverso\ **npm install class-validator class-transformer**
+   
+   En nuestro ejercicio, vamos a crear **dos módulos**: uno para autenticación de usuarios y otro para manejo de puntajes. A continuación los creamos:
+   
+   >nest g module user_auth
+   >
+   >nest g controller user_auth
+   >
+   >nest g service user_auth
+   >
+   
+   >nest g module user_score
+   >
+   >nest g controller user_score
+   >
+   >nest g service user_score
+   >
+   >nest g gateway metaverso_usc
