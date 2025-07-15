@@ -186,3 +186,13 @@ Al finalizar el taller, los participantes contarán con un back-end funcional y 
    >nest g service user_score
    >
    >nest g gateway metaverso_usc
+   >
+   Instalación de módulos y librerías para autenticación con JWT (JSON) Web Tokens y passport:
+
+   >npm install @nestjs/jwt @nestjs/passport passport passport-jwt
+   >
+   >npm install bcrypt
+   
+
+   ## ENLACES IMPORTANTES:
+   1. Introducción al taller: https://www.canva.com/design/DAGtKMtF3HY/avNIoog9QRGR_5-QpBHljA/view?utm_content=DAGtKMtF3HY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6b2c2c613d
