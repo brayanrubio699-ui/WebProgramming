@@ -185,6 +185,9 @@ Al finalizar el taller, los participantes contarán con un back-end funcional y 
    >
    >nest g service user_score
    >
+   Instalación de librer+ias para uso de web sockets:
+   >npm i --save @nestjs/websockets @nestjs/platform-socket.io
+   >
    >nest g gateway metaverso_usc
    >
    Instalación de módulos y librerías para autenticación con JWT (JSON) Web Tokens y passport:
