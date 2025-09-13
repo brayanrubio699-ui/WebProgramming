@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupos de Investigación</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body class="container py-4">
+    <h1 class="mb-4">Gestión de Grupos de Investigación</h1>
+
+    <!-- Listado de grupos (GET) -->
+    <button id="btnCargar" class="btn btn-primary mb-3">Cargar Grupos</button>
+    <ul id="listaGrupos" class="list-group mb-4"></ul>
+    <!-- Información del Grupo Seleccionado -->
+    <div id="infoGrupo" class="mb-4">
+        <h3>Información del Grupo</h3>
+        <p id="nombreGrupo"><strong>Nombre: </strong></p>
+        <p id="objetivosGrupo"><strong>Objetivos: </strong></p>
+        <p id="directorGrupo"><strong>Director: </strong></p>
+    </div>
+
+    <!-- Formulario registrar docente (POST) -->
+    <h2>Registrar Docente</h2>
+    <form id="formDocente" class="mb-4">
+        <!-- Campo nombre docente -->
+        <input type="text" class="form-control mb-2" name="nombre" placeholder="Nombre docente" required>
+
+        <!-- Campo formación académica -->
+        <!-- COMPLETAR -->
+        <input type="text" class="form-control mb-2" name="formacion" placeholder="Formación académica" required>
+
+        <!-- Campo horario de atención -->
+        <!-- COMPLETAR -->
+        <input type="text" class="form-control mb-2" name="horario" placeholder="Horario de atención" required>
+
+        <!-- Campo grupo -->
+        <select class="form-control mb-2" name="grupo" required>
+            <option value="COMBA I+D">COMBA I+D</option>
+            <option value="GIEIAM">GIEIAM</option>
+        </select>
+
+        <button type="submit" class="btn btn-success">Registrar</button>
+    </form>
+
+    <!-- Formulario estudiante (para completar por el estudiante) -->
+    <!-- COMPLETAR -->
+    <h2>Vincular Estudiante a Semillero</h2>
+    <form id="formEstudiante" class="mb-4">
+        <input type="text" class="form-control mb-2" name="nombreEstudiante" placeholder="Nombre estudiante" required>
+        <input type="text" class="form-control mb-2" name="codigo" placeholder="Código estudiante" required>
+        <input type="text" class="form-control mb-2" name="carrera" placeholder="Carrera" required>
+        <select class="form-control mb-2" name="semillero" required>
+            <option value="Comba">Semillero COMBA</option>
+            <option value="Informa">Semillero Informa</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Vincular Estudiante</button>
+    </form>
+
+    <!-- Formulario actividad semillero (para completar por el estudiante) -->
+    <!-- COMPLETAR -->
+    <h2>Registrar Actividad a Semillero</h2>
+    <form id="formActividad" class="mb-4">
+        <input type="text" class="form-control mb-2" name="titulo" placeholder="Título de la actividad" required>
+        <textarea class="form-control mb-2" name="descripcion" placeholder="Descripción de la actividad"
+            required></textarea>
+        <input type="date" class="form-control mb-2" name="fecha" required>
+        <input type="time" class="form-control mb-2" name="hora" required>
+        <input type="number" class="form-control mb-2" name="limite" placeholder="Límite de asistentes" required>
+        <button type="submit" class="btn btn-warning">Registrar Actividad</button>
+    </form>
+
+    <script>
+        const lista = document.getElementById("listaGrupos");
+        const btnCargar = document.getElementById("btnCargarGrupos");
+        const infoGrupo = document.getElementById("infoGrupo");
+        const formDocente = document.getElementById("formDocente");
+        const formEstudiante = document.getElementById("formEstudiante");
+        const formActividad = document.getElementById("formActividad");
+
+        // Datos de ejemplo para los grupos de investigación
+        const grupos = [
+            {
+                nombre: "COMBA I+D",
+                objetivos: "Desarrollar investigaciones orientadas a la innovación tecnológica.",
+                director: "Dr. Juan Pérez"
+            },
+            {
+                nombre: "GIEIAM",
+                objetivos: "Estudio y mejora de los procesos industriales mediante la ingeniería aplicada.",
+                director: "Dra. Laura Gómez"
+            }
+        ];
+
+        const semilleros = {
+            "COMBA I+D": ["Comba", "Informa"]
+        };
+
+        // Función para mostrar los grupos de investigación
+        btnCargarGrupos.addEventListener("click", () => {
+            listaGrupos.innerHTML = '';
+            grupos.forEach(grupo => {
+                const li = document.createElement("li");
+                li.classList.add("list-group-item");
+                li.textContent = grupo.nombre;
+                li.addEventListener("click", () => mostrarInfoGrupo(grupo));
+                listaGrupos.appendChild(li);
+            });
+        });
+
+        // Mostrar información del grupo seleccionado
+        function mostrarInfoGrupo(grupo) {
+            document.getElementById("nombreGrupo").textContent = `Nombre: ${grupo.nombre}`;
+            document.getElementById("objetivosGrupo").textContent = `Objetivos: ${grupo.objetivos}`;
+            document.getElementById("directorGrupo").textContent = `Director: ${grupo.director}`;
+        }
+
+        // Registrar docente investigador
+        formDocente.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(formDocente);
+            const docenteData = {
+                nombre: formData.get("nombre"),
+                formacion: formData.get("formacion"),
+                horario: formData.get("horario"),
+                grupo: formData.get("grupo")
+            };
+
+            alert("Docente registrado: " + docenteData.nombre);
+            console.log(docenteData);  // Aquí se realizaría un POST real en una API
+        });
+
+        // Vincular estudiante a semillero
+        formEstudiante.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(formEstudiante);
+            const estudianteData = {
+                nombre: formData.get("nombreEstudiante"),
+                codigo: formData.get("codigo"),
+                carrera: formData.get("carrera"),
+                semillero: formData.get("semillero")
+            };
+
+            alert("Estudiante vinculado: " + estudianteData.nombre);
+            console.log(estudianteData);  // Aquí se realizaría un POST real en una API
+        });
+
+        // Agregar actividad a semillero
+        formActividad.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(formActividad);
+            const actividadData = {
+                titulo: formData.get("titulo"),
+                descripcion: formData.get("descripcion"),
+                fecha: formData.get("fecha"),
+                hora: formData.get("hora"),
+                limite: formData.get("limite")
+            };
+
+            alert("Actividad registrada: " + actividadData.titulo);
+            console.log(actividadData);  // Aquí se realizaría un POST real en una API
+        });
+    </script>
+</body>
+
+</html>
